@@ -1,6 +1,7 @@
 ```c++
 int main
 	cout << this is how you input code: just type "```";
+end main
 ```
 
 if you want to make this bigger title, press **win and "+"**, I love this. press **win + "B"** to make it strong
