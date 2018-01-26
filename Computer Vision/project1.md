@@ -43,7 +43,7 @@ The problem are divided into two parts:
 
 Thanks to the sample code, we now have 3 equal-size grayscale images representing three colour channels. To overlap them, operate two images each time and **let new pixel's value be equal to half of the sum of the values of the corresponding pixels of the two pictures**, I'm not sure if it looks what I'm expecting, so let's try it.
 
-![overlap](/Users/Cancel/Course/gitbooks/knowledgeTree/assets/computerVision/overlap.png)
+![overlap](../assets/computerVision/overlap.png)
 
 (R + G)
 
@@ -63,7 +63,7 @@ Before calculating the sharpness, there are several parameters to be decided.
 
 2. May be running the specific method on the whole image is not necessary since the "bluriness" of an smaller sub-image is corespondent to the whole image
 
-   | ![subimage](/Users/Cancel/Course/gitbooks/knowledgeTree/assets/computerVision/subimage.png) |
+   | ![subimage](../assets/computerVision/subimage.png) |
    | :--------------------------------------: |
    |                                          |
 
