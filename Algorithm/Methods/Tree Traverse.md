@@ -23,3 +23,30 @@
     }
 ```
 
+总结：一路往左压，来到 top.right(精髓就是这个，无论是否nullptr)，然后弹出 top
+
+后续遍历：
+
+```c++
+void un_recurse(TreeNode* root) {
+    stack<TreeNode*> stk;
+    TreeNode* pre = nullptr;
+    stk.push(root);
+    
+    while(!stk.empty()) {
+        root = stk.top();
+        if(!root->left && !root->right || pre 
+           && (pre == root->left || pre == root->right)) {
+            /*
+            	Visit root here
+            */
+            stk.pop();
+            pre = root;
+        }else {
+            if(root->right) stk.push(root->right);
+            if(root->left) stk.push(root->left);
+        }
+    }
+}
+```
+看栈顶是不是没有孩子，是不是上一个访问元素的父亲节点，若是弹出访问；若不是先压右孩子，再压左孩子
