@@ -1,4 +1,4 @@
-set_new_handler(int)
+set_new_handler(int) 为 new 失败提供 handler
 
 
 
