@@ -1,11 +1,3 @@
-What is the problem
-
-Why is the problem important
-
-how to procedure
-
-
-
 pl_ch11
 
 Encapsulation 
@@ -135,3 +127,98 @@ Unification
 
 隐式堆动态存储 - JavaScript， php 的变量都是存储在堆中的
 
+
+
+数学表达式
+
+operator associativity rules 对定了同等优先级的运算如何进行
+
+加法减法，从左到右，求次方运算，从右到左
+
+apl 这个语言所有的操作符优先级一样，所有的 operators associate 都是从左到右
+
+ruby 的操作符用方法来定义：数学运算，关系运算，赋值运算符，数组索引，偏移，位运算；操作符可以重载
+
+scheme lisp，所有的逻辑运算符和数学运算符都通过“子程序”显式调用：
+
+- a + b * c is coded as (+ a (* b c))
+
+操作数优先级：被括号括起来的先进行运算
+
+函数式的副作用：改变双向参数或者非本地变量
+
+Referential Transparency：拥有相同值的两个表达式可以互相替换，不会影响程序的表现
+
+纯函数式语言是Referential Transparency的，因为他们没有变量
+
+操作符重载：
+
+Narrowing conversion类型转换会丢失掉一些信息，比如 floar to int
+
+Widening conversion 和上面的相反 例如 int to float
+
+类型转换模式：
+
+混合模式转换，对于多种类型都有操作符
+
+强制类型转换：隐式类型转换增加编译器去检查
+
+显式类型转换：被称为 casting eg (int)angle，F# float(sum) 这个 fsharp 类似与函数调用
+
+表达式中的错误：原因：数学限制例如除零，计算机限制例如越界
+
+关系表达式 relational expressions 
+
+ruby 的 == 会忽略类型，而 eql？会确保类型也一样才返回真
+
+Short Circuit Evaluation : 表达式的结果不用计算全部的操作和操作数
+
+例如 (13 * a) / (b + 1), 如果 a 是0，后面的就不计算了
+
+ada 这个语言的赋值操作是:=
+
+Compound Assignment Operators :  a += b
+
+Unary Assignment Operators: a++
+
+赋值语句被用作表达式 while(a = b) a 可以用作表达式
+
+Multiple Assignments：(\$first, 、\$second, \$third) = (20, 30, 40);
+
+函数式语言中的赋值
+
+Identifiers in functional languages are only
+names of values
+• ML (MetaLanguage)
+– Names are bound to values with val
+val fruit = apples + oranges;
+
+- If another val for fruit follows, it is a new,
+  different identifier.
+
+看不懂上面这个啥意思
+
+In Fortran, C, Perl, and C++
+– any numeric type value can be assigned to
+any numeric type variable-–coercion freely
+applied
+• In Java and C#
+– only widening assignment coercions are
+allowed
+
+
+
+选择语句：if else switch
+
+Java example
+if (sum == 0)
+if (count == 0)
+result = 0;
+else result = 1;
+• Which if gets the else?
+• Java's static semantics rule:
+– else matches with the nearest previous if
+
+
+
+计数循环语句：循环变量，初始条件，结束条件，步长
