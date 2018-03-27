@@ -222,3 +222,42 @@ else result = 1;
 
 
 计数循环语句：循环变量，初始条件，结束条件，步长
+
+Chapter 16
+
+1. What are the three primary uses of **symbolic logic** in formal logic?
+
+- Express propositions
+- Express the relationships between propositions
+- Describe how new propositions can be inferred from other propositions that are assumed to be true.
+
+2. What are the **two parts of a compound term**?
+   One of them is **functor**, which is the function symbol that **names the relation**, and the other one is **an ordered list of parameters**, which together represent **an element of the relation**.
+
+
+3. What are the **two modes** in which a **proposition** can be stated?
+   Propositions can be stated in two modes: one in which the proposition is **defined to be true**, and one in which the **truth of the proposition is something that is to be determined**. In other words, propositions either can be **facts or queries**.
+
+
+4. What is the **general form of a proposition in clausal form**?
+   That is B1 U B2 U … U Bn ⊂ A1 ∩ A2 ∩ … ∩ An
+
+
+5. What are antecedents? Consequents?
+   Antecedents are the right side of clausal form propositions, whereas consequents are the left side of clausal form propositions, because it is the consequence of the truth of the antecedent.
+6. Give general (not rigorous) definitions of resolution and unification.
+   Resolution is an inference rule that allows inferred propositions to be computed from given propositions, thus providing a method with potential application to automatic theorem proving
+   Unification: Process of determining useful values for variables.
+7. What are the forms of Horn clauses?
+   There are two forms: They have either a single atomic proposition on the left side or an empty left side.
+8. **What is the basic concept of declarative semantics?**
+   The basic concept of declarative semantics is there is a simple way to determine the meaning of each statement, and it does not depend on how the statement might be used to solve a problem.
+9. What does it mean for a language to be nonprocedural?
+   Programs in such languages do not state exactly how a result is to be computed but rather describe the form of the result. The difference is that we assume the computer system can somehow determine how the result is to be computed. What is needed to provide this capability for logic programming languages is a concise means of supplying the computer with both the relevant information and a method of inference for computing desired results. Predicate calculus supplies the basic form of communication to the computer, and resolution provides the inference technique
+10. What are the three forms of a Prolog term?
+    Constant, variable, and structure
+11. What is an uninstantiated variable?
+    An uninstantiated variable is a variable that has not been assigned a value.
+12. What are the syntactic forms and usage of fact and rule statements in Prolog?(unsolved)
+13. What is a conjunction?
+    A conjunction is a container of multiple terms that are separated by logical AND operations.
